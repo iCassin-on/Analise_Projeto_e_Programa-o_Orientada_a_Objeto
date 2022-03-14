@@ -15,3 +15,5 @@ public class Aula1 {
             sc.close();
         }
 }
+
+//Fazer outro programa que faça calculos aritmeticos

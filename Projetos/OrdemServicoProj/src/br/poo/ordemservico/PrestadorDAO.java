@@ -7,12 +7,12 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * PersistÍncia em Arquivo.
+ * Persist√™ncia em Arquivo.
  * @author marco
  */
 public class PrestadorDAO {
 
-	/** Nome do arquivo comum a todas as operaÁıes. */
+	/** Nome do arquivo comum a todas as opera√ß√µes. */
 	private static final String PRESTADOR_TXT = "Prestador.txt";
 
 	/**
@@ -43,8 +43,8 @@ public class PrestadorDAO {
 	}
 
 	/**
-	 * Retorna um prestador para seu cÛdigo.
-	 * @param cod cÛdigo.
+	 * Retorna um prestador para seu c√≥digo.
+	 * @param cod c√≥digo.
 	 * @return Prestador se existir.
 	 */
 	public Prestador getPrestador(int cod) {
@@ -60,7 +60,7 @@ public class PrestadorDAO {
 	
 	/**
 	 * Insere um prestador.
-	 * O arquivo È aberto para leitura, porÈm, com append=true
+	 * O arquivo √© aberto para leitura, por√©m, com append=true
 	 * para escrever no final do arquivo.
 	 * @param p novo prestador.
 	 */
@@ -77,7 +77,7 @@ public class PrestadorDAO {
 	}
 
 	/**
-	 * MÈtodo auxiliar para manter o padr„o do arquivo.
+	 * M√©todo auxiliar para manter o padr√£o do arquivo.
 	 * @param p prestador.
 	 * @return linha do banco.
 	 */
@@ -94,8 +94,8 @@ public class PrestadorDAO {
 	/**
 	 * Atualiza um prestador.
 	 *
-	 * Em arquivo, essa operaÁ„o complexa, pois n„o se pode
-	 * escrever no meio do arquivo.  O que se faz È escrever
+	 * Em arquivo, essa opera√ß√£o complexa, pois n√£o se pode
+	 * escrever no meio do arquivo.  O que se faz √© escrever
 	 * todo o arquivo novamente.
 	 *
 	 * @param p novo prestador.
@@ -124,8 +124,8 @@ public class PrestadorDAO {
 	/**
 	 * Excluir um prestador.
 	 *
-	 * Em arquivo, essa operaÁ„o complexa, pois n„o se pode
-	 * escrever no meio do arquivo.  O que se faz È escrever
+	 * Em arquivo, essa opera√ß√£o complexa, pois n√£o se pode
+	 * escrever no meio do arquivo.  O que se faz √© escrever
 	 * todo o arquivo novamente.
 	 *
 	 * @param p novo prestador.
@@ -141,7 +141,7 @@ public class PrestadorDAO {
 			for (Prestador p : list) {
 				String line = getLine(p);
 				if (p.getCodigo() == pExcluir.getCodigo()) {
-					continue;  // Nada a fazer, somente n„o escreve no arquivo.
+					continue;  // Nada a fazer, somente n√£o escreve no arquivo.
 				}
 				fw.write(line);
 			}

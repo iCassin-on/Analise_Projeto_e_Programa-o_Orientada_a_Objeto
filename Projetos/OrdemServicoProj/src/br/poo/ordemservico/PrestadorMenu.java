@@ -7,7 +7,7 @@ public class PrestadorMenu {
 
 	public void menu(Scanner sc) {
 		while(true) {
-			System.out.println("Cadastro de Prestador de Serviço");
+			System.out.println("Cadastro de Prestador de ServiÃ§o");
 			System.out.println("1 - Listar");
 			System.out.println("2 - Incluir");
 			System.out.println("3 - Atualizar");
@@ -25,7 +25,7 @@ public class PrestadorMenu {
 			} else if (opcao.equals("5")) {
 				break;
 			} else {
-				System.out.println("Opção não conhecida" + opcao);
+				System.out.println("Opï¿½ï¿½o nï¿½o conhecida" + opcao);
 			}
 		}
 		
@@ -44,7 +44,7 @@ public class PrestadorMenu {
 	
 	private void incluir(Scanner sc) {
 		System.out.println("Incluir um prestador:");
-		System.out.println("Código:");
+		System.out.println("Cï¿½digo:");
 		String codigo = sc.nextLine();
 		System.out.println("Nome:");
 		String nome = sc.nextLine();
@@ -55,12 +55,12 @@ public class PrestadorMenu {
 		
 		if (codigo == null 
 				|| codigo.trim().length() == 0) {
-			System.out.println("Código inválido.");
+			System.out.println("CÃ³digo invÃ¡lido.");
 			return;
 		}
 		if (nome == null 
 				|| nome.trim().length() == 0) {
-			System.out.println("Nome inválido.");
+			System.out.println("Nome invÃ¡lido.");
 			return;
 		}
 		int cod = 0;
@@ -68,7 +68,7 @@ public class PrestadorMenu {
 			cod = Integer.parseInt(codigo);
 		} catch (Exception ex) {
 			ex.printStackTrace();
-			System.out.println("Código deve ser numérico");
+			System.out.println("CÃ³digo deve ser numÃ©rico");
 			return;
 		}
 		
@@ -84,12 +84,12 @@ public class PrestadorMenu {
 	
 	private void atualizar(Scanner sc) {
 		System.out.println("Atualizar um prestador:");
-		System.out.println("Informe o Código:");
+		System.out.println("Informe o CÃ³digo:");
 		String codigo = sc.nextLine();
 		
 		if (codigo == null 
 				|| codigo.trim().length() == 0) {
-			System.out.println("Código inválido.");
+			System.out.println("CÃ³digo invÃ¡lido.");
 			return;
 		}
 		int cod = 0;
@@ -97,13 +97,13 @@ public class PrestadorMenu {
 			cod = Integer.parseInt(codigo);
 		} catch (Exception ex) {
 			ex.printStackTrace();
-			System.out.println("Código deve ser numérico");
+			System.out.println("CÃ³digo deve ser numÃ©rico");
 			return;
 		}
 		PrestadorDAO dao = new PrestadorDAO();
 		Prestador p = dao.getPrestador(cod);
 		if (p == null) {
-			System.out.println("Prestador não encontrado:" + cod);
+			System.out.println("Prestador nÃ£o encontrado:" + cod);
 			return;
 		}
 
@@ -121,12 +121,12 @@ public class PrestadorMenu {
 
 	private void excluir(Scanner sc) {
 		System.out.println("Atualizar um prestador:");
-		System.out.println("Informe o Código:");
+		System.out.println("Informe o CÃ³digo:");
 		String codigo = sc.nextLine();
 		
 		if (codigo == null 
 				|| codigo.trim().length() == 0) {
-			System.out.println("Código inválido.");
+			System.out.println("CÃ³digo invÃ¡lido.");
 			return;
 		}
 		int cod = 0;
@@ -134,13 +134,13 @@ public class PrestadorMenu {
 			cod = Integer.parseInt(codigo);
 		} catch (Exception ex) {
 			ex.printStackTrace();
-			System.out.println("Código deve ser numérico");
+			System.out.println("CÃ³digo deve ser numÃ©rico");
 			return;
 		}
 		PrestadorDAO dao = new PrestadorDAO();
 		Prestador p = dao.getPrestador(cod);
 		if (p == null) {
-			System.out.println("Prestador não encontrado:" + cod);
+			System.out.println("Prestador nÃ£o encontrado:" + cod);
 			return;
 		}
 		dao.excluir(p);
